@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/dgarlitt/release_notes_generator.svg?branch=master)](https://travis-ci.org/dgarlitt/release_notes_generator)
+[![Coverage Status](https://coveralls.io/repos/github/dgarlitt/release_notes_generator/badge.svg?branch=master)](https://coveralls.io/github/dgarlitt/release_notes_generator?branch=master)
+
 # Release Notes Generator
 ***
 

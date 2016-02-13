@@ -1,0 +1,33 @@
+---
+  version_number_pattern: "\\d+\\.\\d+\\.\\d+\\.\\d+"
+  tag_matching:
+    description:
+      - "The prefix and suffix defined here are used on either side of"
+      - "the version number pattern to distinguish release tags in the"
+      - "repository. For instance, with the sample provided here, all"
+      - "tags that match the pattern: ^tap-\\d+\\.\\d+\\.\\d+\\.\\d+$"
+      - "will be considered release tags by the script."
+    prefix: "tap-"
+    suffix: ""
+  exclude_commits:
+    from_email:
+      - "jenkins@livenation.com"
+    containing_version_number: true
+  tickets:
+    pattern: "[A-Za-z]{3,3}-\\d+"
+    url: "https://contegixapp1.livenation.com/jira/browse"
+  project:
+    name: "TAP"
+    path: "../../../tap"
+    repo_web_url: "http://git.tm.tmcs/tap/tap"
+    git:
+      remote: "origin"
+  wiki:
+    path: "../../"
+    release_notes:
+      index: "release-notes.md"
+      archive: "release-notes-archive"
+    git:
+      remote: "origin"
+      branch: "master"
+

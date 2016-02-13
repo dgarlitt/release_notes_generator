@@ -1,0 +1,59 @@
+{
+  "version_number_pattern" : "\\d+\\.\\d+\\.\\d+",
+  "tag_matching" : {
+    "description" : [
+      "The prefix and suffix defined here are used on either side of",
+      "the version number pattern to distinguish release tags in the",
+      "repository. For instance, with the sample provided here, all",
+      "tags that match the pattern: ^v\\d+\\.\\d+\\.\\d+\\.\\d+$",
+      "will be considered release tags by the script."
+    ],
+    "prefix" : "v",
+    "suffix" : ""
+  },
+  "exclude_commits" : {
+    "description": [
+      "This section allows you to exclude commits from a specific user",
+      "from showing up in the generated release notes. This is useful",
+      "if you use a continuous integration environment like Jenkins and",
+      "allow it to push commits back to your repo.",
+      "You can also eliminate commits that contain the version number",
+      "based on the pattern, prefix and suffix above."
+    ],
+    "from_email" : [
+      "badgrampa9999@johnnyknoxville.com"
+    ],
+    "containing_version_number": true
+  },
+  "tickets" : {
+    "description": [
+      "This is the pattern that will be used to determine if a commit",
+      "references a ticket (like a Jira ticket), and will link any matching",
+      "commits back to the ticket using the url followed by the ticket number.",
+      "",
+      "This is clearly not flexible and the url should define where the ticket",
+      "number goes in the future."
+    ],
+    "pattern" : "[A-Za-z]{3,3}-\\d+",
+    "url" : "http://myownprivatejira.com/browse"
+  },
+  "project" : {
+    "name" : "karma-nyan-reporter",
+    "path" : "../../karma-nyan-reporter/",
+    "repo_web_url" : "https://github.com/dgarlitt/karma-nyan-reporter",
+    "git" : {
+      "remote" : "origin"
+    }
+  },
+  "wiki" : {
+    "path" : "../../nyan-wiki/",
+    "release_notes" : {
+      "index" : "release-notes.md",
+      "archive" : "release-notes-archive"
+    },
+    "git": {
+      "remote" : "origin",
+      "branch" : "master"
+    }
+  }
+}

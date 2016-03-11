@@ -31,7 +31,7 @@ To generate release notes for all release tags past to present, it can be run as
 To generate release notes for an individual release tag, run:
 
 ```sh
-./main.py 1.2.3.4 # where 1.2.3.4 is the release tag name
+./main.py 1.2.3.4
 ```
 
 where __1.2.3.4__ would be substituted for an individual release number.

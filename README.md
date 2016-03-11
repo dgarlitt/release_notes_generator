@@ -4,12 +4,14 @@
 # Release Notes Generator
 ***
 
+This is a python based library for generating release notes (in markdown) from a project's commit log (for a given tag) and pushing the release notes to a wiki repository. A tag is compared to the previous tag (if one exists) to get a list of commits. These commits are then parsed to extract ticket/issue numbers, messages and author info to be used for the generated release notes. The cleaner and more relevant the commit messages are, the more useful the generated release notes become. This encourages developers to provide clean, meaningful commit history that summarize their work and associates it with an issue before merging it into a mainline branch.
+
 ### Setup
 ***
 
- - Clone your project
- - Clone your wiki
- - Clone this project
+ - Clone the project you want to generate release notes from
+ - Clone the wiki where you want to post release notes to
+ - Clone and `cd` into this project `git clone git@github.com:dgarlitt/release_notes_generator.git && cd $_`
  - Edit the ```props.json``` file
     - Paths specified in this file can be absolute or relative and can optionally have a slash on the end
     - Update any regex patterns to fit your project needs
@@ -18,18 +20,18 @@
 ### Usage
 ***
 
-The ```main.py``` script is the main script that triggers the generation of release notes. There is a props.json file in the same directory that can be used to configure the script to fit an individual's development environment. The main script can take one of two arguments.
+The `main.py` script is the main script that triggers the generation of release notes. There is a props.json file in the same directory that can be used to configure the script to fit an individual's development environment. The main script can take one of two arguments.
 
 To generate release notes for all release tags past to present, it can be run as:
 
-```
+```sh
 ./main.py all
 ```
 
-To generate release notes for an individual release, run:
+To generate release notes for an individual release tag, run:
 
-```
-./main.py 1.2.3.4
+```sh
+./main.py 1.2.3.4 # where 1.2.3.4 is the release tag name
 ```
 
 where __1.2.3.4__ would be substituted for an individual release number.
